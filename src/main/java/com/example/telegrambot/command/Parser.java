@@ -6,6 +6,7 @@ import org.apache.log4j.Logger;
 
 import java.util.List;
 
+@SuppressWarnings("restriction")
 public class Parser {
     private static final Logger log = Logger.getLogger(Parser.class);
     private final String PREFIX_FOR_COMMAND = "/";

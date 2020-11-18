@@ -5,7 +5,7 @@ import org.apache.log4j.Logger;
 import org.telegram.telegrambots.api.methods.BotApiMethod;
 import org.telegram.telegrambots.api.methods.send.SendSticker;
 import org.telegram.telegrambots.api.objects.Message;
-import org.telegram.telegrambots.exceptions.TelegramApiException;
+//import org.telegram.telegrambots.exceptions.TelegramApiException;
 
 public class MessageSender implements Runnable {
     private static final Logger log = Logger.getLogger(MessageSender.class);
@@ -36,7 +36,8 @@ public class MessageSender implements Runnable {
         }
     }
 
-    private void send(Object object) {
+    @SuppressWarnings("unchecked")
+	private void send(Object object) {
         try {
             MessageType messageType = messageType(object);
             switch (messageType) {

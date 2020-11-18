@@ -4,7 +4,7 @@ import com.example.telegrambot.bot.Bot;
 import lombok.ToString;
 import org.apache.log4j.Logger;
 import org.telegram.telegrambots.api.methods.send.SendMessage;
-import org.telegram.telegrambots.api.methods.send.SendSticker;
+//import org.telegram.telegrambots.api.methods.send.SendSticker;
 
 @ToString
 public class Notify implements Runnable {
@@ -39,7 +39,7 @@ public class Notify implements Runnable {
         return new SendMessage(chatID, "I will send you notify after " + delayInMillisec / MILLISEC_IN_SEC + "sec");
     }
 
-    private SendMessage getSecondMessage() {
-        return new SendMessage(chatID, "This is notify message. Thanks for using :)");
-    }
+//    private SendMessage getSecondMessage() {
+//        return new SendMessage(chatID, "This is notify message. Thanks for using :)");
+//    }
 }
